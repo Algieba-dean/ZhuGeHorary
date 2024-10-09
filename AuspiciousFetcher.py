@@ -18,11 +18,11 @@ def get_auspicious(number: int):
     ...
 
 
-# total = 384
-# for num in range(total):
-#     number = num + 1
-#     get_auspicious(number=number)
-#     ...
+total = 384
+for num in range(total):
+    number = num + 1
+    get_auspicious(number=number)
+    ...
 
 file = Path("Stroke/Unihan_IRGSources.txt")
 output = Path("Stroke/unicode2stroke.json")

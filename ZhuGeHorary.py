@@ -1,16 +1,8 @@
 import json
+from Config import Config
 
-with open("Stroke/unicode2stroke.json") as f:
+with open(Config.UNICODE_STROKE_JSON_PATH) as f:
     unicode2stroke = json.load(f)
-
-
-def transfer_to_tradition():
-    ...
-
-
-def get_tradition_character_stroke_count():
-    ...
-
 
 def get_character_stroke_count(char: str):
     unicode = "U+" + str(hex(ord(char)))[2:].upper()
@@ -25,11 +17,11 @@ def get_number(first: str, second: str, third: str):
     return number
 
 def get_auspicious(number:int):
-    file = f"Auspicious/auspicious_{number}.txt"
+    file = Config.AUSPICIOUS_PATH_TEMPLATE.substitute(number=number)
     with open(file=file, mode="r", encoding="utf-8") as f:
         auspicious = f.read()
     return auspicious
 
-number = get_number("一","时","欢")
+number = get_number(first="彪",second="虎",third="豹")
 result = get_auspicious(number=number)
 print(result)
