@@ -17,3 +17,6 @@
 
 ## 使用脚本
 使用脚本的话，直接在[ZhuGeHorary.py](ZhuGeHorary.py)中对查询字进行修改，运行`python ZhuGeHorary.py`即可。
+
+## 直接使用WebApp
+Streamlit提供了免费的webapp访问服务，目前将脚本直接部署到了[这里](https://zhugehorary.streamlit.app/),点击食用即可.
